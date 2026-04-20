@@ -10,7 +10,7 @@ const aims = [
   {
     icon: Code2,
     title: "Software Developer.",
-    desc: "Designing clean, scalable backends in Java with strong DSA foundations.",
+    desc: "Java with strong DSA foundations.",
   },
   {
     icon: Globe,
