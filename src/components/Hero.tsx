@@ -44,7 +44,7 @@ export function Hero() {
           <h2 className="font-display text-2xl font-semibold leading-snug mb-4">
             CSE Student & aspiring AI Engineer, based in Bhopal, India.
           </h2>
-          <p className="text-sm text-muted-foreground leading-relaxed font-mono">
+          <p className="text-sm text-muted-foreground leading-relaxed font-sans">
             3rd-year Computer Science student at Bansal Group of Institutions. Passionate about Java, Data Structures & Algorithms, and currently exploring Artificial Intelligence.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-3">
