@@ -6,7 +6,7 @@ const skills = [
   { icon: Boxes, name: "DSA in Java", level: 80, tag: "Core" },
   { icon: Globe, name: "HTML & CSS", level: 70, tag: "Web" },
   { icon: Database, name: "SQL", level: 65, tag: "Database" },
-  { icon: Brain, name: "Artificial Intelligence", level: 40, tag: "Learning" },
+  { icon: Brain, name: "Artificial Intelligence", level: 15, tag: "Learning" },
 ];
 
 export function Skills() {
