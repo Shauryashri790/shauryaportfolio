@@ -29,14 +29,18 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Shaurya's Portfolio" },
+      { name: "description", content: "Here is my website which tell about myself" },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Shaurya's Portfolio" },
+      { property: "og:description", content: "Here is my website which tell about myself" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Shaurya's Portfolio" },
+      { name: "twitter:description", content: "Here is my website which tell about myself" },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/ddcc9a2c-689d-4677-a425-7c66f70f314b" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/ddcc9a2c-689d-4677-a425-7c66f70f314b" },
     ],
     links: [
       {
