@@ -30,7 +30,7 @@ export function Contact() {
             — Contact
           </p>
           <h2 className="font-display text-4xl sm:text-5xl font-bold leading-tight accent-underline inline-block">
-            Let's build something.
+            THANK YOU !
           </h2>
           <p className="mt-12 text-muted-foreground text-lg leading-relaxed max-w-md">
             Got a project, an opportunity, or just want to say hi? My inbox is always open.
