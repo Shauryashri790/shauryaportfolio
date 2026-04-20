@@ -1,6 +1,11 @@
-import { Mail, Phone, Linkedin, Github, Send } from "lucide-react";
+import { Mail, Phone, Linkedin, Github, Send, Loader2 } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+import emailjs from "@emailjs/browser";
+
+const EMAILJS_SERVICE_ID = "service_61e8okp";
+const EMAILJS_TEMPLATE_ID = "template_tukvhhc";
+const EMAILJS_PUBLIC_KEY = "CTI2zG8nqlxdYFtwz";
 
 const contacts = [
   { icon: Mail, label: "Email", value: "shauryashri9@gmail.com", href: "mailto:shauryashri9@gmail.com" },
@@ -11,15 +16,35 @@ const contacts = [
 
 export function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [sending, setSending] = useState(false);
 
-  const submit = (e: React.FormEvent) => {
+  const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
       toast.error("Please fill in all fields");
       return;
     }
-    toast.success("Message sent! I'll reply soon.");
-    setForm({ name: "", email: "", message: "" });
+    setSending(true);
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          from_name: form.name,
+          from_email: form.email,
+          message: form.message,
+          reply_to: form.email,
+        },
+        { publicKey: EMAILJS_PUBLIC_KEY },
+      );
+      toast.success("Message sent! I'll reply soon.");
+      setForm({ name: "", email: "", message: "" });
+    } catch (err) {
+      console.error("EmailJS error:", err);
+      toast.error("Failed to send message. Please try again.");
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -98,9 +123,14 @@ export function Contact() {
             </div>
             <button
               type="submit"
-              className="mt-4 w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium hover:opacity-90 transition-all hover:shadow-[var(--shadow-glow)]"
+              disabled={sending}
+              className="mt-4 w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium hover:opacity-90 transition-all hover:shadow-[var(--shadow-glow)] disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              Send message <Send className="w-4 h-4" />
+              {sending ? (
+                <>Sending <Loader2 className="w-4 h-4 animate-spin" /></>
+              ) : (
+                <>Send message <Send className="w-4 h-4" /></>
+              )}
             </button>
           </div>
         </form>
