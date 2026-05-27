@@ -37,17 +37,17 @@ export function About() {
               {
                 title: "B.Tech in Computer Science Engineering",
                 place: "Bansal Group of Institutions, Bhopal",
-                meta: "Expected 2027 · CGPA 7.0",
+                meta: "Expected 2027 · CGPA 6.94",
               },
               {
                 title: "Class 12th — Senior Secondary",
                 place: "Maharishi Vidya Mandir, Hamirpur, U.P.",
-                meta: "70%",
+                meta: "66.4%",
               },
               {
                 title: "Class 10th — Secondary",
                 place: "Maharishi Vidya Mandir, Hamirpur, U.P.",
-                meta: "70%",
+                meta: "68.4%",
               },
             ].map((edu) => (
               <div
