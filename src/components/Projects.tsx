@@ -1,4 +1,4 @@
-import { Github, ExternalLink, Trophy, Users, Train } from "lucide-react";
+import { Github, ExternalLink, Trophy, Users, Train, Zap } from "lucide-react";
 
 export function Projects() {
   return (
