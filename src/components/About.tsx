@@ -20,7 +20,8 @@ export function About() {
             </p>
           </div>
           <a
-            href="#"
+            href="/Shaurya_Shrivastava_Resume.docx"
+            download="Shaurya_Shrivastava_Resume.docx"
             className="mt-10 inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all"
           >
             <Download className="w-4 h-4" /> Download Resume
